@@ -46,7 +46,7 @@ export default function Home() {
 
 
         <h1 className={styles.title}>Register URL YouTube</h1>
-        <Alert variant="primary">Hoje temos {urlsRegistered}</Alert>
+        <Alert variant="primary">Hoje temos {urlsRegistered} URLs processadas</Alert>
         <InputGroup className="mb-3 mt-5">
           <InputGroup.Text id="basic-addon1">URL</InputGroup.Text>
           <Form.Control

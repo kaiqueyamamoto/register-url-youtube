@@ -1,23 +1,25 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import Button from 'react-bootstrap/Button';
-import api from '../service/api';
+import Button from "react-bootstrap/Button";
+import api from "../service/api";
+import Alert from "react-bootstrap/Alert";
 
 export default function Home() {
   const [url, setUrl] = useState("");
+  const [status, setStatus] = useState(false);
 
-  const handleSubmit = async ( ) => { 
+  const handleSubmit = async () => {
     try {
-      const response = await api.post('/', { url });
+      const response = await api.post("/", { url });
       setUrl("");
+      setStatus(true);
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <div className={styles.container}>
@@ -28,10 +30,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Register URL YouTube <span>MongoDB</span>
-        </h1>
-    
+        <h1 className={styles.title}>Register URL YouTube</h1>
+
         <InputGroup className="mb-3 mt-5">
           <InputGroup.Text id="basic-addon1">URL</InputGroup.Text>
           <Form.Control
@@ -41,11 +41,11 @@ export default function Home() {
             value={url}
             onChange={(e) => setUrl(e.target.value)}
           />
-          <Button variant="primary" type="button" onClick={handleSubmit}>Enviar</Button>
+          <Button variant="primary" type="button" onClick={handleSubmit}>
+            Enviar
+          </Button>
         </InputGroup>
-
-
-  
+        {status && <Alert variant="success">URL registrada com sucesso!</Alert>}
       </main>
     </div>
   );

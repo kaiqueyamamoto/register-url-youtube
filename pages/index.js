@@ -8,10 +8,8 @@ import Alert from "react-bootstrap/Alert";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import Header from "../components/Header";
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -46,12 +44,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
       <Container>
-        <Navbar expand="lg" variant="dark" bg="dark" className="mb-5">
-          <Container>
-            <Navbar.Brand href="#">Conecta-Tools</Navbar.Brand>
-          </Container>
-        </Navbar>
         <Row className="align-items-center justify-content-center">
           <Col className="text-center align-items-center justify-content-center mx-auto">
             <h1>Register URL YouTube</h1>

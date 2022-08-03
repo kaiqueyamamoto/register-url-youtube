@@ -10,16 +10,19 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import Header from "../components/Header";
+import ModalYoutube from "../components/ModalYoutube";
 
 export default function Home() {
   const [url, setUrl] = useState("");
   const [status, setStatus] = useState(false);
   const [urlsRegistered, setUrlsRegistered] = useState();
+  const [data, setData] = useState()
 
   const handleSubmit = async () => {
     try {
-      await api.post("/", { url });
+      const data = await api.post("/", { url });
       const response = await api.get("/count");
+      setData(data.data);
       setUrlsRegistered(response.data.count);
       setUrl("");
       setStatus(true);
@@ -66,9 +69,12 @@ export default function Home() {
               </Button>
             </InputGroup>
 
-            {status && (
-              <Alert variant="success">URL registrada com sucesso!</Alert>
-            )}
+           {status && (
+             <ModalYoutube 
+                title={data.modelYoutube.youtube.snippet.title} 
+                description={data.modelYoutube.youtube.snippet.description} 
+                image={data.modelYoutube.youtube.snippet.thumbnails.maxres.url} />
+            )} 
           </Col>
         </Row>
       </Container>

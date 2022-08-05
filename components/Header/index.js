@@ -12,13 +12,13 @@ export default function Header() {
             <Nav.Link href="/contents">Conteúdos</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Toggle />
+        {/* <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Nav className="mr-auto">
             <Nav.Link href="/login">Entrar</Nav.Link>
             <Nav.Link href="/register">Registra-Se</Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse> */}
       </Container>
     </Navbar>
   );

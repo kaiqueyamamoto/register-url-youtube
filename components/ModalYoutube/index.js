@@ -7,7 +7,6 @@ export default function ModalYoutube(props) {
         <Col>
           <Alert variant="success">URL registrada com sucesso!</Alert>
           <Card>
-            <Card.Img src={props.image} variant="top"/>
             <Card.Body>
               <Card.Title>{props.title}</Card.Title>
               <Card.Text>{props.description}</Card.Text>

@@ -1,9 +1,25 @@
+import { useState, useEffect } from "react";
+import api from "../service/api";
 import Head from "next/head";
 import {Container} from "react-bootstrap";
 import Header from "../components/Header";
-import AlertMessage from "../components/Alerts";
+import ModalYoutubeContent from "../components/ModalYoutbeContent";
 
 export default function Contents() {
+
+  const [list, setList] = useState();
+  const [dataInfo, setDataInfo] = useState();
+
+  useEffect(() => {
+    async function getData() {
+      const response = await api.get("/list");
+      // const data = await response.json();
+      setList(response);
+      console.log(list.data.list);
+    }
+    getData();
+  }, []);
+
   return (
     <div>
       <Head>
@@ -14,7 +30,7 @@ export default function Contents() {
 
       <Header />
       <Container>
-        <AlertMessage variant={'danger'} message={'Página em Desenvolvimento'} />
+        <ModalYoutubeContent lists={list.data.list} />
       </Container>
     </div>
   )

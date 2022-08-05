@@ -72,8 +72,8 @@ export default function Home() {
            {status && (
              <ModalYoutube 
                 title={data.modelYoutube.youtube.snippet.title} 
-                description={data.modelYoutube.youtube.snippet.description} 
-                image={data.modelYoutube.youtube.snippet.thumbnails.maxres.url} />
+                description={data.modelYoutube.youtube.snippet.description}
+                />
             )} 
           </Col>
         </Row>

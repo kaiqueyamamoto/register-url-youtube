@@ -11,6 +11,7 @@ import Col from "react-bootstrap/Col";
 
 import Header from "../components/Header";
 import ModalYoutube from "../components/ModalYoutube";
+import ContentInformation from '../components/ContentInformation'
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -48,6 +49,7 @@ export default function Home() {
       </Head>
 
       <Header />
+      <ContentInformation />
       <Container>
         <Row className="align-items-center justify-content-center">
           <Col className="text-center align-items-center justify-content-center mx-auto">

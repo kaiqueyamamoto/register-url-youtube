@@ -9,7 +9,7 @@ export default function ModalYoutube(props) {
           <Card>
             <Card.Body>
               <Card.Title>{props.title}</Card.Title>
-              <Card.Text>{props.description}</Card.Text>
+              {/* <Card.Text>{props.description}</Card.Text> */}
             </Card.Body>
           </Card>
         </Col>

@@ -70,10 +70,7 @@ export default function Home() {
             </InputGroup>
 
            {status && (
-             <ModalYoutube 
-                title={data.modelYoutube.youtube.snippet.title} 
-                description={data.modelYoutube.youtube.snippet.description}
-                />
+             <ModalYoutube title={data.modelYoutube.youtube.snippet.title} />
             )} 
           </Col>
         </Row>

@@ -8,7 +8,7 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">YouTUbe</Nav.Link>
+            <Nav.Link href="/">YouTube</Nav.Link>
             <Nav.Link href="/links">Links</Nav.Link>
           </Nav>
         </Navbar.Collapse>

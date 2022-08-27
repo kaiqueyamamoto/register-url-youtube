@@ -1,15 +1,15 @@
-import { Nav, Container, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
 export default function Header() {
   return (
     <Navbar expand="lg" variant="dark" bg="dark" className="mb-5">
-      <Container>
-        <Navbar.Brand href="/">Conecta-Tools</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+       <Container>
+        <Navbar.Brand href="#">Conecta Academy</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
           <Nav className="mr-auto">
-            <Nav.Link href="/">YouTube</Nav.Link>
-            <Nav.Link href="/links">Links</Nav.Link>
+            <Nav.Link> Entrar </Nav.Link>
+            <Nav.Link> Registrar-Se </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
